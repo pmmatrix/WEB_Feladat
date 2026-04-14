@@ -24,7 +24,7 @@
 	<div class="versenyek">
 		<form onsubmit="event.preventDefault();onFormSubmit();">
 			<div>
-				<label>Verseny neve</label><label class="validation-error hide" id="fullNameValidationError">Kötelező mező.</label>
+				<label>Verseny neve</label><label class="ellenorzes hide" id="ellenorzes">Kötelező mező</label>
 				<input type="text" name="vnev" id="vnev">
 			</div>
 			<div>
@@ -33,10 +33,10 @@
 			</div>
 			<div>
 				<label>Időpont</label>
-				<input type="date" name="ido" id="ido">
+				<input type="date" name="ido" id="ido" onfocus="this.showPicker()"  onmousedown="this.showPicker()" onkeydown="return false;">
 			</div>
             <div  class="form-action-buttons">
-				<input type="submit" value="Submit">
+				<input type="submit" value="rögzítés">
 			</div>
 </div>
 		</form>
@@ -48,6 +48,7 @@
 					<th>Verseny neve</th>
 					<th>Helyszin</th>
 					<th>Időpont</th>
+					<th>Módosítás</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,5 +57,6 @@
 		</table>
 	</div>
     <footer>Gyurászik György Marcell - ZX4R0A | Patkós Máté - CS9R44</footer>
+	<script src="crud.js"></script>
 </body>
 </html>

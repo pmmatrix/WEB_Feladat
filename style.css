@@ -1,3 +1,4 @@
+/* Alapbeállítások */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header és Navigáció */
 header {
     background-color: #15151e;
     padding: 15px 20px;
@@ -60,22 +62,113 @@ header a:hover {
     transform: skewX(-15deg);
 }
 
-main {
-    flex: 1;
+.versenyek{
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
     width: 90%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    float: left;
+
+}
+.tablazat {
+max-width: 1000px;
+    margin: 20px auto;
+    width: 90%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    float: right;
 }
 
+/* Form stílusok */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+input[type="text"], 
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus {
+    outline: none;
+    border-color: #e10600;
+}
+
+/* Submit gomb */
+input[type="submit"] {
+    background-color: #15151e;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e10600;
+}
+
+/* Táblázat stílusok */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 10px;
 }
 
+th {
+    background-color: #15151e;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Validációs hiba üzenet */
+.validation-error {
+    color: #e10600;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.hide {
+    display: none;
+}
+
+/* Footer */
 footer {
     margin-top: auto;
     padding: 20px;
@@ -86,4 +179,3 @@ footer {
     border-top: 4px solid #e10600;
     letter-spacing: 1px;
 }
-

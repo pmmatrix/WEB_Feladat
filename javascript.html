@@ -20,14 +20,39 @@
             <a href="oojs.html">OOJS</a>
         </nav>
     </header>
+	<div class="versenyek">
+		<form onsubmit="event.preventDefault();onFormSubmit();">
+			<div>
+				<label>Verseny neve</label><label class="validation-error hide" id="fullNameValidationError">Kötelező mező.</label>
+				<input type="text" name="vnev" id="vnev">
+			</div>
+			<div>
+				<label>Helyszin</label>
+				<input type="text" name="hely" id="hely">
+			</div>
+			<div>
+				<label>Időpont</label>
+				<input type="date" name="ido" id="ido">
+			</div>
+			<div  class="form-action-buttons">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+	<div class = "tablazat">
+		<table class="list" id="lista">
+			<thead>
+				<tr>
+					<th>Verseny neve</th>
+					<th>Helyszin</th>
+					<th>Időpont</th>
+				</tr>
+			</thead>
+			<tbody>
 
-    <main>
-        <div class="Kezdo"></div>
-        <div class="Leírás">
-            <table></table>
-        </div>
-    </main>
-
+			</tbody>
+		</table>
+	</div>
     <footer>Gyurászik György Marcell - ZX4R0A | Patkós Máté - CS9R44</footer>
 </body>
 </html>

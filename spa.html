@@ -70,14 +70,27 @@
                                 >SPRINT</button>
                             </div>
                             <div style={{marginTop: '15px'}}>
+                                
+                                
                                 <label >Helyezés: </label>
+                                
+                                
                                 <input 
                                     type="number" 
                                     min="1" 
                                     max="22" 
                                     value={helyezes} 
-                                    onChange={(e) => setHelyezes(e.target.value)}
-                                />
+                                    onChange={(e) => {const ertek = parseInt(e.target.value);
+
+                                    if (e.target.value === "") {
+                                        setHelyezes("");
+                                        return;
+                                    }
+                                    if (ertek >= 1 && ertek <= 22) {
+                                         setHelyezes(ertek);
+                                        }
+                                }}
+                                /><label >max:22!</label>
                             </div>
                             {isSprint && helyezes > 8 && <p class="np">Nincs pontszerzés</p>}
                             {!isSprint && helyezes > 10 && <p class="np">Nincs pontszerzés</p>}

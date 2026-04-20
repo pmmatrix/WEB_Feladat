@@ -6,7 +6,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch($method) {
     case 'GET':
-        // JAVÍTVA: mozik helyett mozi tábla
+        
         $stmt = $pdo->query("SELECT * FROM F1");
         $gp = $stmt->fetchAll();
         echo json_encode($gp);
@@ -15,7 +15,6 @@ switch($method) {
     case 'POST':
         $data = json_decode(file_get_contents("php://input"));
         if(!empty($data->nev) && !empty($data->helyszin) && !empty($data->datum) ) {
-            // JAVÍTVA: mozik helyett mozi tábla
             $stmt = $pdo->prepare("INSERT INTO F1 (nev,helyszin,datum) VALUES (?, ?, ?)");
             $stmt->execute([$data->nev, $data->helyszin,$data->datum]);
             echo json_encode(["message" => "Sikeres hozzáadás"]);

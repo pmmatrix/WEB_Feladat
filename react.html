@@ -64,29 +64,29 @@
 
         return (
             <div>
-            <div class="tablazat">
+            <div className="tablazat">
                 <h2>Versenyek (React CRUD + API)</h2>
                 <br/>
                 <div>
-                    <label for="palya">Pálya</label>
+                    <label htmlFor="palya">Pálya</label>
                     <input type="text" name="palya" value={nev} onChange={(e) => setNev(e.target.value)} />
                 </div>
                 <div>
-                    <label for="helyszin">Helyszín</label>
+                    <label htmlFor="helyszin">Helyszín</label>
                     <input type="text" name="helyszin" value={helyszin} onChange={(e) => setHelyszin(e.target.value)} />
                 </div>
                 <div>
-                    <label for="datum">Dátum</label>
+                    <label htmlFor="datum">Dátum</label>
                     <input type="date" name="datum" value={datum} onChange={(e) => setDatum(e.target.value)} onFocus={(e) => e.target.showPicker()} onMouseDown={(e) => e.target.showPicker()} onKeyDown={(e) => e.preventDefault()} />
                 </div>
                 <div>
-                    <button class="gomb" onClick={hozzaad} >Rögzítés</button>
+                    <button className="gomb" onClick={hozzaad} >Rögzítés</button>
                 </div>
                 
             </div>
 
-            <div class="tablazat">
-        <table class="list" id="lista">
+            <div className="tablazat">
+        <table className="list" id="lista">
 			<thead>
 				<tr>
 					<th>Verseny neve</th>

@@ -8,14 +8,13 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$port = 3306;
 $host = 'localhost';
-$dbname = 'F1db';
-$user = '';
-$pass = '';
+$dbname = 'f1db';
+$user = 'f1db';
+$pass = 'patikakicsi';
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
+$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
 
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

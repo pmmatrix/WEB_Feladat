@@ -35,17 +35,11 @@
     </div>
     <div class="tablazat">
         <table class="list" id="lista">
-			<thead>
-				<tr>
-					<th>Verseny neve</th>
-					<th>Helyszín</th>
-					<th>Időpont</th>
-					<th>Módosítás</th>
-				</tr>
-            </thead>
+			
         </table>
+        <ul id="lista"></ul>
     </div>
-    <ul id="lista"></ul>
+    
 </main>
 
 <script>
@@ -56,16 +50,22 @@
         const adatok = await res.json();
         const lista = document.getElementById('lista');
         lista.innerHTML = '';
+        lista.innerHTML+=`<thead>
+				<tr>
+					<th>Verseny neve</th>
+					<th>Helyszín</th>
+					<th>Időpont</th>
+					<th>Módosítás</th>
+				</tr>
+            </thead>`;
         adatok.forEach(palya => {
             lista.innerHTML += `
-                    {gp.map(palya => (
-                        <tr key=${palya.azon}>
-                            <td>${palya.nev}</td>
-                            <td>${palya.helyszin}</td>
-                            <td>${palya.datum}</td>
-                            <td><a onClick={() => torol(palya.azon)} id="torol">Törlés</a></td>
-                        </tr>
-                    ))}`;
+                        <tr key=${palya.azon} >
+                            <td>${palya.nev} </td>
+                            <td>${palya.helyszin} </td>
+                            <td>${palya.datum} </td>
+                            <td> {<a onClick={() => torol(${palya.azon})} id="torol">Törlés</a>} </td>
+                        </tr>`;
         });
     }
 

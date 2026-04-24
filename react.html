@@ -88,15 +88,15 @@
                 <br/>
                 <div>
                     <label htmlFor="palya">Pálya</label>
-                    <input type="text" name="palya" value={nev} onChange={(e) => setNev(e.target.value)} />
+                    <input type="text" name="palya" value={nev} onChange={(e) => setNev(e.target.value)}  required/>
                 </div>
                 <div>
                     <label htmlFor="helyszin">Helyszín</label>
-                    <input type="text" name="helyszin" value={helyszin} onChange={(e) => setHelyszin(e.target.value)} />
+                    <input type="text" name="helyszin" value={helyszin} onChange={(e) => setHelyszin(e.target.value)} required />
                 </div>
                 <div>
                     <label htmlFor="datum">Dátum</label>
-                    <input type="date" name="datum" value={datum} onChange={(e) => setDatum(e.target.value)} onFocus={(e) => e.target.showPicker()} onMouseDown={(e) => e.target.showPicker()} onKeyDown={(e) => e.preventDefault()} />
+                    <input type="date" name="datum" required value={datum} onChange={(e) => setDatum(e.target.value)} onFocus={(e) => e.target.showPicker()} onMouseDown={(e) => e.target.showPicker()} onKeyDown={(e) => e.preventDefault()} />
                 </div>
                 <div>
                     { mod ? 

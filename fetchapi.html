@@ -26,11 +26,11 @@
         <h2>Versenyhétvégék (Szerver oldali - Fetch API)</h2>
         <br>
         <label for="nev">Verseny neve</label>
-        <input type="text" name="nev" id="nev" value="">
+        <input type="text" name="nev" id="nev" value="" required>
         <label for="helyszin">Helyszín</label>
-        <input type="text" name="helyszin"id="helyszin" value="">
+        <input type="text" name="helyszin"id="helyszin" value="" required>
         <label for="datum">Dátum</label>
-        <input type="date"name="datum" id="datum" value="" onfocus="this.showPicker()"  onmousedown="this.showPicker()" onkeydown="return false;">
+        <input type="date"name="datum" id="datum" value="" onfocus="this.showPicker()"  onmousedown="this.showPicker()" onkeydown="return false;" required>
         <div id="modositment"><button  class="gomb" onclick="mentes()">Rögzítés</button></div>
     </div>
     <div class="tablazat">
